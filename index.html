@@ -527,7 +527,7 @@
             friction: 0.985,
             boost: 0,
             lap: 1,
-            totalLaps: 3,
+            totalLaps: 8,
             finished: false,
             blunder: 0,
             shake: 0
@@ -610,8 +610,8 @@
             if (controls.forward) game.speed += 1.8 + game.gear * 1.2;
             if (controls.reverse) game.speed -= 2.8;
 
-            if (Math.abs(game.speed) > 2) {
-                if (controls.left) game.lane -= 0.08 + (game.speed / 150);
+            if (Math.abs(game.speed) > 1) {
+                if (controls.left) game.lane += 0.08 + (game.speed / 150);
                 if (controls.right) game.lane -= 0.08 + (game.speed / 150);
             }
 
@@ -1307,8 +1307,8 @@
             const keys = new Map([
                 ['w', 'forward'],
                 ['s', 'reverse'],
-                ['a', 'left'], ['arrowleft', 'left'],
-                ['d', 'right'], ['arrowright', 'right'],
+                ['a', 'right'], ['arrowleft', 'right'],
+                ['d', 'left'], ['arrowright', 'left'],
                 [' ', 'nitro']
             ]);
 
