@@ -611,8 +611,8 @@
             if (controls.reverse) game.speed -= 2.8;
 
             if (Math.abs(game.speed) > 2) {
-                if (controls.left) game.lane += 0.08 + (game.speed / 150);
-                if (controls.right) game.lane -= 0.08 + (game.speed / 150);
+                if (controls.left) game.lane -= 0.08 + (game.speed / 150);
+                if (controls.right) game.lane += 0.08 + (game.speed / 150);
             }
 
             if (controls.nitro) {
